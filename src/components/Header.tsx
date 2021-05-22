@@ -1,7 +1,12 @@
 import React from 'react';
 import { View, Text, StatusBar, StyleSheet } from 'react-native';
 
-export function Header() {
+interface HeaderProps {
+    changeTheme: () => void;
+    darkTheme: boolean;
+}
+
+export function Header({ changeTheme, darkTheme }: HeaderProps) {
   return (
     <View style={styles.header}>
       <Text style={styles.headerText}>to.</Text>
